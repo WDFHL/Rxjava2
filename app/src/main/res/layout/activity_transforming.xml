@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fadeScrollbars="false"
@@ -9,22 +7,12 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.rxjava2.practice.MainActivity">
-
-
+    >
+<!-- android:fadeScrollbars="false" 设置成true可以实现滚动条的自动隐藏和显示-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Operators Categories"
-            android:textAllCaps="false"
-            android:onClick="startOperatorsActivity"
-            android:textColor="@android:color/black" />
-
 
     </LinearLayout>
 

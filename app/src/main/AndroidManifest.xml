@@ -16,6 +16,45 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.OperatorsActivity"/>
+
+        <!--Creating创建操作-->
+        <activity android:name=".activity.creating.CreatingActivity"/>
+        <activity android:name=".activity.creating.CreateActivity"/>
+        <activity android:name=".activity.creating.DeferActivity"/>
+        <activity android:name=".activity.creating.FromActivity"/>
+        <activity android:name=".activity.creating.JustActivity"/>
+        <activity android:name=".activity.creating.StartActivity"/>
+        <activity android:name=".activity.creating.RepeatActivity"/>
+        <activity android:name=".activity.creating.RangeActivity"/>
+
+
+        <!--TransForming变换操作-->
+        <activity android:name=".activity.transforming.TransFormingActivity"/>
+        <!--Filtering过滤操作-->
+        <activity android:name=".activity.filtering.FilteringActivity"/>
+        <!--Combining结合操作-->
+        <activity android:name=".activity.combining.CombiningActivity"/>
+        <!--ErrorHandling错误处理-->
+        <activity android:name=".activity.errorhandling.ErrorHandlingActivity"/>
+        <!--Utility辅助操作-->
+        <activity android:name=".activity.utility.UtilityActivity"/>
+        <!--Conditional条件和布尔操作-->
+        <activity android:name=".activity.conditional.ConditionalActivity"/>
+        <!--Mathematical算术和聚合操作-->
+        <activity android:name=".activity.mathematical.MathematicalActivity"/>
+        <!--Async异步操作-->
+        <activity android:name=".activity.async.AsyncActivity"/>
+        <!--Connect连接操作-->
+        <activity android:name=".activity.connect.ConnectActivity"/>
+        <!--Convert转换操作-->
+        <activity android:name=".activity.convert.ConvertActivity"/>
+        <!--Blocking阻塞操作-->
+        <activity android:name=".activity.blocking.BlockingActivity"/>
+        <!--String字符串操作-->
+        <activity android:name=".activity.string.StringActivity"/>
+
+
     </application>
 
 </manifest>

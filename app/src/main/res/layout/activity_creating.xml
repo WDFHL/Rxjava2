@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadeScrollbars="false"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    >
+<!-- android:fadeScrollbars="false" 设置成true可以实现滚动条的自动隐藏和显示-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create"
+            android:textAllCaps="false"
+            android:onClick="startCreateActivity"
+            android:textColor="@android:color/black" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Defer"
+            android:textAllCaps="false"
+            android:onClick="startDeferActivity"
+            android:textColor="@android:color/black" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="From"
+            android:textAllCaps="false"
+            android:onClick="startFromActivity"
+            android:textColor="@android:color/black" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Just"
+            android:textAllCaps="false"
+            android:onClick="startJustActivity"
+            android:textColor="@android:color/black" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:textAllCaps="false"
+            android:onClick="startStartActivity"
+            android:textColor="@android:color/black" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Repeat"
+            android:textAllCaps="false"
+            android:onClick="startRepeatActivity"
+            android:textColor="@android:color/black" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Range"
+            android:textAllCaps="false"
+            android:onClick="startRangeActivity"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
+</ScrollView>
