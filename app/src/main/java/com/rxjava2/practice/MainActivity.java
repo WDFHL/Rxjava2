@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //observable订阅observer
+        //一个观察者(Observer)订阅一个可观察对象(Observable)
         observable.subscribe(observer);
 
     }
