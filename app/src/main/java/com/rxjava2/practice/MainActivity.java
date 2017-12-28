@@ -7,11 +7,9 @@ import android.view.View;
 
 import com.rxjava2.practice.activity.OperatorsActivity;
 
-import io.reactivex.Observable;
-import io.reactivex.ObservableEmitter;
-import io.reactivex.ObservableOnSubscribe;
-import io.reactivex.Observer;
-import io.reactivex.disposables.Disposable;
+import rx.Observable;
+import rx.Observer;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,32 +32,30 @@ public class MainActivity extends AppCompatActivity {
 
         //创建观察者对象 决定事件触发的时候将有怎样的行为
              final Observer<String> observer = new Observer<String>(){
+                 @Override
+                 public void onCompleted() {
+                     //事件队列完结
+                     //正常终止,如果没有遇到错误,Observable在最后一次调用onNext之后调用此方法
+                 }
 
-            @Override
-            public void onSubscribe(Disposable d) {
-                //观察者被订阅时的回调,一般进行一些预处理
-                //最开始被调用的地方,截断发送事件只用调用d.dispose()观察者就不会接收到事件了
-            }
+                 @Override
+                 public void onError(Throwable e) {
+                     //事件队列异常
+                     //当Observable遇到错误或者无法返回期望的数据时会调用这个方法,这个调用会终止Observable
+                     //后续不会再调用onNext和onCompleted，onError方法的参数是抛出的异常.
+                 }
 
-            @Override
-            public void onNext(String s) {
-            //处理观察到的事件
-            }
-
-            @Override
-            public void onError(Throwable e) {
-            //事件队列异常
-            }
-
-            @Override
-            public void onComplete() {
-            //事件队列完结
-            }
-        };
+                 @Override
+                 public void onNext(String s) {
+                     //处理观察到的事件
+                     //Observable调用这个方法发射数据,方法的参数就是Observable发射的数据,这个方法可能会被调用多次,取决于你的实现
+                     //传递数据给onNext通常称作发射,onCompleted和onError被称作通知
+                 }
+             };
         //创建被观察者 Observable 决定什么时候触发事件以及触发怎样的事件
-        Observable observable = Observable.create(new ObservableOnSubscribe() {
+        Observable observable = Observable.create(new Observable.OnSubscribe() {
             @Override
-            public void subscribe(ObservableEmitter e) throws Exception {
+            public void call(Object o) {
                 observer.onNext("动感光波");
                 observer.onNext("嘤嘤嘤");
             }
